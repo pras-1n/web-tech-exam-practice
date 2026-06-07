@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Form with validation</title>
+  </head>
+  <body>
+    <form id="myForm" onsubmit="return validateForm(event);">
+      <p>
+        <label for="usrname">Username </label>
+        <input type="text" id="usrname" name="usrname" />
+      </p>
+      <p>
+        <label for="pswd">Password </label>
+        <input type="password" id="pswd" />
+      </p>
+      <p>
+        <label for="cntry">Country</label>
+        <select name="cntry" id="cntry">
+          <option value="">Select a country...</option>
+          <option value="Nepal">Nepal</option>
+          <option value="India">India</option>
+          <option value="USA">USA</option>
+          <option value="Japan">Japan</option>
+        </select>
+      </p>
+      <p>
+        <label>Gender</label>
+        <input type="radio" id="male" name="gender" value="M" />
+        <label for="male">M</label>
+        <input type="radio" id="female" name="gender" value="F" />
+        <label for="female">F</label>
+      </p>
+
+      <input type="submit" value="submit" />
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
