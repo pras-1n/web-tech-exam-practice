@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#btn").click(function () {
+          $("#box")
+            .slideUp(1000)
+            .slideDown(1000, function () {
+              alert("Animation is 100% complete.");
+            });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="box" style="width: 100px; height: 100px; background: green"></div>
+    <br />
+    <button id="btn">Click to Slide</button>
+  </body>
+</html>

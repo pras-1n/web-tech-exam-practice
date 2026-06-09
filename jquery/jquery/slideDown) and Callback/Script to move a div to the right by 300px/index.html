@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(moveBtn).click(function () {
+          $(myDiv).animate({ left: "300px" }, "slow");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div
+      id="myDiv"
+      style="width: 100px; height: 100px; background: blue; position: relative"
+    ></div>
+    <br />
+    <button id="moveBtn">Move Right</button>
+  </body>
+</html>
