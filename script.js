@@ -1,20 +1,34 @@
-const { use } = require("react");
-
 function validateForm(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    let username = document.getElementById("usrname").value;
-    let password = document.getElementById("pswd").value;
-    let country = document.getElementById("cntry").value;
-    let genders = document.getElementById("gndr");
+  let username = document.getElementById("usrname").value;
+  let password = document.getElementById("pswd").value;
+  let country = document.getElementById("cntry").value;
+  let genders = document.getElementById("gndr");
 
-    if (username.trim()==="" || username.length<4){
-        alert("Username is required and must be at least 4 characters long.")
-        return false;
-    }
+  if (username.trim() === "" || username.length < 4) {
+    alert("ユーザー名は必須で、　４文字以上である必要があります。");
+    return false;
+  }
 
-    let pwdRegex = /^[a-zA-Z].*#$/;
-    if (password === "" || !pwdRegex.test(password)) {
-        alert("Password is required, must start with a character, and end with a hashtag (#).")
-    }
+  let pwdRegex = /^[a-zA-Z].*#$/;
+  if (password === "" || !pwdRegex.test(password)) {
+    alert(
+      "パスワードが必要です、文字から始まり、シャープ（＃）で終わる必要があります。",
+    );
+    return false;
+  }
+
+  if (country === "") {
+    alert("国を入力してください！");
+    return false;
+  }
+
+  if (!gender) {
+    alert("性冪を選んでください！");
+    return false;
+  }
+
+  alert("フォームが送信されました");
+  return true;
 }
